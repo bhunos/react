@@ -17,7 +17,10 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   devServer: {
-    static: path.resolve(__dirname, 'public'),
+    static: {
+      watch: true,
+      directory: path.resolve(__dirname, 'public')
+    },
     hot: true
   },
   plugins: [
